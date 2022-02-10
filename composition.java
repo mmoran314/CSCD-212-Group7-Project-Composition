@@ -1,0 +1,2 @@
+public class composition {
+}
