@@ -30,3 +30,6 @@ $$_$$$$$$$$$$$$____________$$$$$$$$$$_______
 $$_$$$$$$$hg$$$____$$$$$$$$__$$$____________
 $$$$__$$$$$$$$$$$$$$$$$$$$$$$$______________
 $$_________$$$$$$$$$$$$$$$__________________
+
+problem.java will be a file of trying to solve a problem without use of the composite pattern
+Every other file will be demoing the composite pattern
