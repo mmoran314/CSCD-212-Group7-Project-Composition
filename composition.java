@@ -5,9 +5,12 @@ public class composition implements Food {
 
     @Override
     public void showFoodDetails() {
+        int i = 0;
         for (Food myFood :
                 myMenu) {
+            System.out.print(i + ": ");
             myFood.showFoodDetails();
+            i++;
         }
     }
     public void addFood(Food myFood) {
@@ -15,6 +18,9 @@ public class composition implements Food {
     }
     public void removeFood(Food myFood) {
         myMenu.remove(myFood);
+    }
+    public Food getFood(int i) {
+        return myMenu.get(i);
     }
 }
 

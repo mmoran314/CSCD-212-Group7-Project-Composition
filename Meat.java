@@ -1,15 +1,15 @@
 import java.util.*;
-public class Meat implements Food { // The Meat will be our first leaf
+public class Meat implements Food { // The Meat will be one of our leaves
     private String name;
-    private int calories;
+    private int quantity;
     private double price;
-    private boolean vegetarian;
 
-    public Meat(final String name, final int calories,final double price, final boolean vegetarian) {
+
+    public Meat(final String name, final int quantity , final double price) {
         this.name = name;
-        this.calories = calories;
+        this.quantity = quantity;
         this.price = price;
-        this.vegetarian = vegetarian;
+
 
     }
 
@@ -19,11 +19,6 @@ public class Meat implements Food { // The Meat will be our first leaf
 
     @Override
     public void showFoodDetails() {
-        if (vegetarian) {
-            System.out.println(name +  "\n" + "Calories: " + calories + "\n" + "Price: " + price + "\n" + "Vegetarian" + "\n");
-        }
-        else {
-            System.out.println(name +  "\n" + "Calories: " + calories + "\n" + "Price: " + price + "\n");
-        }
+        System.out.println(name +  "\n" + "Quantity: " + quantity + "\n" + "Price: " + price + "\n");
     }
 }
