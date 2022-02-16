@@ -1,25 +1,23 @@
 public class Salad implements Food { // This will be our second leaf
     private String name;
-    private int calories;
+    private int quantity;
     private double price;
-    private boolean vegetarian;
+    private int calories;
 
-    public Salad(final String name, final int calories, final double price, final boolean vegetarian) {
+    public Salad(final String name, final int quantity, final double price, final int calories) {
         this.name = name;
-        this.calories = calories;
+        this.quantity = quantity;
         this.price = price;
-        this.vegetarian = vegetarian;
+        this.calories = calories;
     }
 
     public Salad() {
     }
 
+
     @Override
     public void showFoodDetails() {
-        if (vegetarian) {
-            System.out.println(name +  "\n" + "Calories: " + calories + "\n" + "Price: " + price + "\n"+ "Vegetarian" + "\n");
-        } else {
-            System.out.println(name +  "\n" + "Calories: " + calories + "\n" + "Price: " + price + "\n");
-        }
+        System.out.println(name +  "\n" + "Quantity: " + quantity + "\n" + "Price: " + price + "\n" + calories);
+
     }
 }
