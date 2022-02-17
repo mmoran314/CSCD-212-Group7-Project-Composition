@@ -6,6 +6,10 @@ public class Main {
         // Some foods to add to our grocery list
         Meat steak = new Meat("Steak", 1, 6.99);
         Meat chicken = new Meat("Chicken", 2, 5.99);
+        Produce banana = new Produce("Banana", 5, 0.20);
+        Produce apple = new Produce("Apple", 4, 0.59);
+        Bread wholeWheat = new Bread("Whole Wheat", 1, 2.99, 12);
+        Bread multiGrain = new Bread("Multi Grain", 2, 3.99, 14);
 
 
         // Let's create a subList for our meats
@@ -13,9 +17,21 @@ public class Main {
         meatList.addFood(steak);
         meatList.addFood(chicken);
 
+        // Produce List
+        composition produceList = new composition();
+        produceList.addFood(banana);
+        produceList.addFood(apple);
+
+        //Bread List
+        composition breadList = new composition();
+        breadList.addFood(wholeWheat);
+        breadList.addFood(multiGrain);
+
         // Let's add all our lists into one big grocery List
         composition fullList = new composition();
         fullList.addFood(meatList);
+        fullList.addFood(produceList);
+        fullList.addFood(breadList);
 
 
         System.out.println("Please pick one of the options: ");
@@ -37,12 +53,12 @@ public class Main {
             }
             case(3):{
                 System.out.println("Produce List: ");
-               // produceList.showFoodDetails();
+                produceList.showFoodDetails();
                 break;
             }
             case(4): {
                 System.out.println("Bread List: ");
-               // breadList.showFoodDetails();
+                breadList.showFoodDetails();
                 break;
             }
         }
